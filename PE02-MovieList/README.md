@@ -1,10 +1,10 @@
-# cs628-PE01
+# cs628-PE02
 
 Input:
-The inputs for this program is the App.js file, the Resume.js file, and the Resume.css file. The app.js file imports the Resume component and instantiates it. The Resume.js file contains all the simple components for the webpage and exports the Resume component. The Resume.css file defines the stylistic options for each of the components.
+The app accepts input in the form of mouseclicks on the movie cards, and changes to the genre dropdown list.
 
 Process:
-Using the create-react-app tool, it is possbile to quickly set up a single page web app for development. This process automatically sets up the webpage and loads file updates and displays them after refreshing the webpage.
+When a mouseclick occurs over a movie card, the onClick handler of the <div> tag is called and displays a short message including the title of the movie encapsulated in that card. When the dropdown menu is changed, the onChange handler updates the genreValue state. This state is used to conditionally render movie cards that contain the selected genre.
 
 Output:
-The output is seen in the browser. It consists a green screen with the static information typical for a resume, formatted according to the Resume.css file.
+An alert is displayed after a movie card is clicked, and the list of rendered cards updates when a new value is selected in the genres dropdown.
