@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "web-vitals": "^4.2.4"
+  }
+}
