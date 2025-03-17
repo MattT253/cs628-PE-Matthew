@@ -57,3 +57,30 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
+.deleteRecipeButton{
+  background-color: rgb(228, 63, 63);
+  padding: 5px;
+  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.editRecipeButton{
+  background-color: rgb(135, 181, 202);
+  padding: 5px;
+  margin: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.collapseRecipeButton{
+  background-color: rgb(108, 187, 180);
+  padding: 5px;
+  margin: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}

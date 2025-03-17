@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Home from './Home';
-import Cities from './Cities';
-import AddCities from './AddCities';
-import City from './City';
+import Recipes from './Recipes';
+import AddRecipes from './AddRecipes';
+import Recipe from './Recipe';
+import Edit from './edit';
 
 function App () {
-  // Stores the cities in an array
-  const[cityListValue, setCityListValue] = useState([])
-      
-  // Increments city IDs as cities are added to the list
-  const[cityIDCount, setCityIDCount] = useState(0)
+  // Stores the recipes in an array
+  const[recipeListValue, setRecipeListValue] = useState([])
 
   return (
     <BrowserRouter>
@@ -22,20 +20,21 @@ function App () {
               <NavLink to="/" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/cities" activeClassName="active">Cities</NavLink>
+              <NavLink to="/recipes" activeClassName="active">Recipes</NavLink>
             </li>
             <li>
-              <NavLink to="/addCities" activeClassName="active">AddCities</NavLink>
+              <NavLink to="/addRecipes" activeClassName="active">Add Recipes</NavLink>
             </li>
           </ul>
         </nav>
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="cities" element={<Cities cityListValue={cityListValue} cityIDCount={cityIDCount}/>}>
-                <Route path={"city/:id"} element={<City cityListValue={cityListValue}/>} />
+            <Route path="/edit/:id" element={<Edit />} />
+            <Route path="recipes" element={<Recipes recipeListValue={recipeListValue} setRecipeListValue={setRecipeListValue}/>}>
+                <Route path={"recipe/:id"} element={<Recipe recipeListValue={recipeListValue} setRecipeListValue={setRecipeListValue}/>} />
             </Route>
-            <Route path="addCities" element={<AddCities cityListValue={cityListValue} setCityListValue={setCityListValue} cityIDCount={cityIDCount} setCityIDCount={setCityIDCount}/>} />
+            <Route path="addRecipes" element={<AddRecipes recipeListValue={recipeListValue} setRecipeListValue={setRecipeListValue}/>} />
           </Routes>
         </div>
       </div>
